@@ -1,0 +1,2 @@
+#installing pyside for python in manjaro
+yay -S python-pyside
