@@ -1,2 +1,6 @@
 #installing pyside for python in manjaro
 yay -S python-pyside
+
+#configuring osTicket server 
+https://technologyrss.com/how-to-install-osticket-v1-14-on-centos-7-with-apache/
+
