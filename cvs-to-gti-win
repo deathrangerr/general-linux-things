@@ -1,0 +1,11 @@
+1. Install python2.4
+2. Install git
+3. Download cvs2git
+https://github.com/mhagger/cvs2svn.git
+4. Edit cv2git-example file which will be inside cvs2svn, you just cloned
+5. search for run_options.set_project, and replace with your module name
+#### https://stackoverflow.com/questions/881158/is-there-a-migration-tool-from-cvs-to-git
+6. Now go to powershell and use this command
+ example:  C:\Python27\python.exe C:\Users\geethika.d\Downloads\cvs2svn-master\cvs2svn-master\cvs2git --options=C:\Users\geethika.d\Downloads\cvs2svn-master\cvs2svn-master\cvs2git-example.options --fallback-encoding utf-8
+
+References: https://www.mcs.anl.gov/~jacob/cvs2svn/faq.html
