@@ -19,3 +19,11 @@ https://computingforgeeks.com/setup-uvdesk-ticketing-system-on-ubuntu/
 #kubeinstall with flannel
 https://gist.github.com/rkaramandi/44c7cea91501e735ea99e356e9ae7883
 
+#custom ami aws
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/deploying_red_hat_enterprise_linux_7_on_public_cloud_platforms/deploying-a-virtual-machine-on-aws_cloud-content
+
+qemu-img convert -f qcow2 -O raw rhel-guest-image-7.0-20140930.0.x86_64.qcow2 rhel-guest-image-7.0-20140930.0.x86_64.raw
+aws s3 cp rhel-guest-image-7.0-20140930.0.x86_64.raw s3://amol-buccket-179
+aws ec2 import-image --platform Linux --license-type BYOL --no-encrypted --description imagedescription --architecture x86_64 --disk-containers Format=Raw,UserBucket="{S3Bucket=amol-buccket-179,S3Key=rhel-guest-image-7.0-20140930.0.x86_64.raw}" --region ap-south-1
+aws ec2 describe-import-image-tasks
+
