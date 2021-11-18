@@ -27,3 +27,6 @@ aws s3 cp rhel-guest-image-7.0-20140930.0.x86_64.raw s3://amol-buccket-179
 aws ec2 import-image --platform Linux --license-type BYOL --no-encrypted --description imagedescription --architecture x86_64 --disk-containers Format=Raw,UserBucket="{S3Bucket=amol-buccket-179,S3Key=rhel-guest-image-7.0-20140930.0.x86_64.raw}" --region ap-south-1
 aws ec2 describe-import-image-tasks
 
+
+#multiple user add
+https://www.alitajran.com/add-users-to-multiple-groups-powershell/
