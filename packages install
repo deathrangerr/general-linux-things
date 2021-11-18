@@ -30,3 +30,6 @@ aws ec2 describe-import-image-tasks
 
 #multiple user add
 https://www.alitajran.com/add-users-to-multiple-groups-powershell/
+
+#Office 365: How to add or remove an email alias using Powershell
+https://www.tachytelic.net/2018/12/add-remove-email-alias-powershell/
