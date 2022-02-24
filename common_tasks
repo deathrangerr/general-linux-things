@@ -1,0 +1,14 @@
+You can easily do this with built-in commands.
+
+Feed the contents of the file sort. We need this for the next step.
+This goes to uniq -c. It will count the unique occurrence of each line. If the similar lines are not adjacent, this wouldn't have worked without sorting before.
+Then, feed it to another sort, which now sorts in reversed order (r) and based on the numeric (n) interpretation of the uniq output. We need the numeric option since otherwise, the space in front of the numbers would lead to wrong results (see GNU sort's help for more).
+Finally, only show the first twelve lines with head.
+The command would then be:
+
+sort test.txt | uniq -c | sort -rn | head -n 12
+The output here contains the actual count of the occurrences.
+
+To only get the raw list of lines, you can pipe the output to sed:
+
+sort test.txt | uniq -c | sort -rn | head -n 12 | sed -E 's/^ *[0-9]+ //g'
